@@ -18,19 +18,40 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let k1 = Kategoriler(kategori_id: 1, kategori_ad: "Dram")
-        let k2 = Kategoriler(kategori_id: 2, kategori_ad: "Komedi")
-        let k3 = Kategoriler(kategori_id: 3, kategori_ad: "Bilim Kurgu")
-        kategoriListe.append(k1)
-        kategoriListe.append(k2)
-        kategoriListe.append(k3)
-
         kategoriTableView.dataSource = self
         kategoriTableView.delegate = self
         
+        tumKategorilerAl()
     }
 
 
+    func tumKategorilerAl() {
+        AF.request("http://kasimadalan.pe.hu/filmler/tum_kategoriler.php", method: .get).response { response in
+            if let data = response.data {
+                do {
+                    let cevap = try JSONDecoder().decode(KategoriCevap.self, from: data)
+                   
+                    if let gelenKategoriListesi = cevap.kategoriler {
+                        self.kategoriListe = gelenKategoriListesi
+                    }
+                    DispatchQueue.main.async {
+                        self.kategoriTableView.reloadData()
+                    }
+                    
+                } catch  {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indeks = sender as? Int
+        
+        let gidilecekVC = segue.destination as! FilmViewController
+        gidilecekVC.kategori = kategoriListe[indeks!]
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource {

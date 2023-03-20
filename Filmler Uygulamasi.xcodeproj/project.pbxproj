@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E41467B029C7954600D707A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E41467AF29C7954600D707A6 /* Alamofire */; };
+		E41467B229C7969600D707A6 /* KategoriCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41467B129C7969600D707A6 /* KategoriCevap.swift */; };
+		E41467B429C7972D00D707A6 /* FilmCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41467B329C7972D00D707A6 /* FilmCevap.swift */; };
 		E444883729AB7B7B00B635EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444883629AB7B7B00B635EB /* AppDelegate.swift */; };
 		E444883929AB7B7B00B635EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444883829AB7B7B00B635EB /* SceneDelegate.swift */; };
 		E444883B29AB7B7B00B635EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E444883A29AB7B7B00B635EB /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E41467B129C7969600D707A6 /* KategoriCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriCevap.swift; sourceTree = "<group>"; };
+		E41467B329C7972D00D707A6 /* FilmCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCevap.swift; sourceTree = "<group>"; };
 		E444883329AB7B7B00B635EB /* Filmler Uygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filmler Uygulamasi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E444883629AB7B7B00B635EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E444883829AB7B7B00B635EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +88,10 @@
 				E444884E29AB86D200B635EB /* FilmViewController.swift */,
 				E444885029AB86E900B635EB /* FilmDetayViewController.swift */,
 				E444885229AB895A00B635EB /* Kategoriler.swift */,
+				E41467B129C7969600D707A6 /* KategoriCevap.swift */,
 				E444885429AB8C6500B635EB /* Yonetmenler.swift */,
 				E444885629AB929000B635EB /* Filmler.swift */,
+				E41467B329C7972D00D707A6 /* FilmCevap.swift */,
 			);
 			path = "Filmler Uygulamasi";
 			sourceTree = "<group>";
@@ -168,8 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E444885529AB8C6500B635EB /* Yonetmenler.swift in Sources */,
+				E41467B429C7972D00D707A6 /* FilmCevap.swift in Sources */,
 				E444883B29AB7B7B00B635EB /* ViewController.swift in Sources */,
 				E444884D29AB843600B635EB /* FilmHucreCollectionViewCell.swift in Sources */,
+				E41467B229C7969600D707A6 /* KategoriCevap.swift in Sources */,
 				E444885729AB929000B635EB /* Filmler.swift in Sources */,
 				E444883729AB7B7B00B635EB /* AppDelegate.swift in Sources */,
 				E444885129AB86E900B635EB /* FilmDetayViewController.swift in Sources */,
